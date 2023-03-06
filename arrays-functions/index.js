@@ -1,9 +1,10 @@
 /**
  * Question one
  */
-
 // differences between mutating array methods and non-mutation array methods in JavaScript
-mutating array method are array methods that mutate the array they’re called on while non mutating array method are  array methods that does not mutate the array they’re called on.are
+// mutating array method are array methods that mutate(alter) the array they’re called on 
+// while non mutating array method are  array methods that does not mutate(alter) the array
+//  they’re called on.
 
 // examples of mutating array methods
 Array.prototype.pop()
@@ -18,6 +19,7 @@ Array.prototype.concat()
 Array.prototype.map()
 Array.prototype.filter()
 Array.prototype.join()
+
 
 /**
  * Question Two
@@ -40,20 +42,27 @@ languages.splice(5, 1);
 languages.splice(5, 0, 'Go','Rust');
 console.log(languages);
 
+
 /**
  * Question Three
  */
+  //  calling this function gives an error': Uncaught TypeError: Cannot
+  //  set properties of undefined (setting '2').
+  //  The code below did not work because the fruit array is out of  scope.
+  // also, array have methods use to add a new element or to remove an element. 
+
 let fruit = ['apple', 'mango', 'banana'];
 		function changeFruit( fruit ) {
     			fruit[2] = "orange";
     			return fruit;
 		}
         changeFruit();
- 'calling this function gives an error': 'Uncaught TypeError: Cannot set properties of undefined (setting '2')'
- 
+
+
 /**
  * Question Four
- * Write a function that accepts an array of numbers as an argument. Return the maximum value in the array.
+ * Write a function that accepts an array of numbers as an argument. Return the
+ *  maximum value in the array.
  */
 function findLargestNum(arr) {
     let largestNum = 0
@@ -67,4 +76,13 @@ function findLargestNum(arr) {
      }
     const result = findLargestNum([1, 3, 4 , 6, 9, 2, 5, 10]);
     console.log(result);
-    
+      
+    /**
+     * Question five
+     */
+    const arr = [1, 2, 4, 6];
+    let valTimesIndex = arr.map(function(val,index,arr){
+        return val*index;
+    });
+
+    console.log(valTimesIndex); 
